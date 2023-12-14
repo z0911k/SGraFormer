@@ -11,7 +11,7 @@ from common.opt import opts
 from common.h36m_dataset import Human36mDataset
 from common.Mydataset import Fusion
 
-from model.HMVFormer import hmvformer
+from model.SGraFormer import sgraformer
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -116,7 +116,7 @@ if __name__ == '__main__':
     test_dataloader = torch.utils.data.DataLoader(test_data, batch_size=opt.batch_size,
                                                   shuffle=False, num_workers=int(opt.workers), pin_memory=True)
 
-    model = hmvformer(num_frame=opt.frames, num_joints=17, in_chans=2, embed_dim_ratio=32, depth=4,
+    model = sgraformer(num_frame=opt.frames, num_joints=17, in_chans=2, embed_dim_ratio=32, depth=4,
                       num_heads=8, mlp_ratio=2., qkv_bias=True, qk_scale=None, drop_path_rate=0.1)
     # model = FuseModel()
 

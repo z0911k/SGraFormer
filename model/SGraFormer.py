@@ -9,7 +9,7 @@ from timm.models.layers import DropPath
 from common.opt import opts
 
 from model.Spatial_encoder import First_view_Spatial_features, Spatial_features
-from model.Temtemporal_encoder import TemTemporal__features
+from model.Temporal_encoder import Temporal__features
 
 opt = opts().parse()
 device = torch.device("cuda")
@@ -17,7 +17,7 @@ device = torch.device("cuda")
 
 
 #######################################################################################################################
-class hmvformer(nn.Module):
+class sgraformer(nn.Module):
     def __init__(self, num_frame=9, num_joints=17, in_chans=2, embed_dim_ratio=32, depth=4,
                  num_heads=8, mlp_ratio=2., qkv_bias=True, qk_scale=None,
                  drop_rate=0., attn_drop_rate=0., drop_path_rate=0.2, norm_layer=None):
