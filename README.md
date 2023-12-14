@@ -43,7 +43,12 @@ python main.py --frames 27 --batch_size 1024 --nepoch 50 --lr 0.0002
 ## Citation
 If you find our work useful in your research, please consider citing:
 
-    Lijun Zhang, Kangkang Zhou, Feng Lu, Xiang-Dong Zhou, Yu Shi. Deep Semantic Graph Transformer for Multi-view 3D Human Pose Estimation. The 38th Annual AAAI Conference on Artificial Intelligence (AAAI), 2024.
+    @inproceedings{
+        The 38th Annual AAAI Conference on Artificial Intelligence (AAAI)
+        author = {Lijun Zhang, Kangkang Zhou, Feng Lu, Xiang-Dong Zhou, Yu Shi},
+        title = {Deep Semantic Graph Transformer for Multi-view 3D Human Pose Estimation},
+        year = {2024},
+        }
     
 
 ## Acknowledgement
